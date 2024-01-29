@@ -20,9 +20,9 @@ setuptools.setup(
     ],
     python_requires='>=3.6',
     install_requires=[
-        'torch==1.6.0',
-        'torchvision==0.7.0',
-        'tensorboard==2.3.0',
+        'torch==2.1.2',
+        'torchvision==0.16.2',
+        'tensorboard==2.15.1',
         'pytorch-ignite==0.4.*',
         'matplotlib',
         'numpy',
