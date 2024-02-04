@@ -122,17 +122,18 @@ def get_device(device=None):
     if device is None:
         if torch.cuda.is_available():
             device = 'cuda'
-            torch.set_default_dtype('torch.cuda.FloatTensor')
+            torch.set_default_dtype(torch.float32)
         else:
             device = 'cpu'
     elif device == 'cuda':
         if torch.cuda.is_available():
             device = 'cuda'
-            torch.set_default_dtype('torch.cuda.FloatTensor')
+            torch.set_default_dtype(torch.float32)
         else:
             device = 'cpu'
     else:
         device = 'cpu'
+    torch.set_default_device('cuda')
 
     if device == 'cuda':
         logger.info("CUDA device set to '{}'.".format(torch.cuda.get_device_name(0)))
